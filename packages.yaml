@@ -1,0 +1,7 @@
+- aptget:
+    package_name:
+        ppa_source: ppa:package/source
+        upgrade: true
+    package_name_two: ppa:package/source
+    package_name_onemore:
+        ppa_source: ppa:package/source
