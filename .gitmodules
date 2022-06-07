@@ -14,3 +14,7 @@
 [submodule "plugins/dotbot-snap"]
 	path = plugins/dotbot-snap
 	url = https://github.com/DrDynamic/dotbot-snap.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+	ignore = dirty
