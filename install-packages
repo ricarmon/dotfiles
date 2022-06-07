@@ -1,1 +1,0 @@
-~/.dotfiles/dotbot/bin/dotbot -d ~/.dotfiles -c ~/.dotfiles/packages.yaml -p ~/.dotfiles/dotbot_plugin_aptget/aptget.py
