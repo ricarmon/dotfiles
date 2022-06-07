@@ -2,11 +2,8 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "dotbot-apt"]
-	path = dotbot-apt
-	url = https://github.com/bryant1410/dotbot-apt
 [submodule "dotbot_plugin_aptget"]
-	path = dotbot_plugin_aptget
+	path = plugins/dotbot_plugin_aptget
 	url = https://github.com/dein0s/dotbot_plugin_aptget.git
 [submodule "dotbot-sudo"]
 	path = dotbot-sudo
@@ -14,3 +11,6 @@
 [submodule "plugins/dotbot-git"]
 	path = plugins/dotbot-git
 	url = https://github.com/DrDynamic/dotbot-git.git
+[submodule "plugins/dotbot-snap"]
+	path = plugins/dotbot-snap
+	url = https://github.com/DrDynamic/dotbot-snap.git

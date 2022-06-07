@@ -12,4 +12,4 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" -p "${BASEDIR}/plugins/dotbot-sudo/sudo.py" -p "${BASEDIR}/plugins/dotbot_plugin_aptget/aptget.py" "${@}"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" -p "${BASEDIR}/plugins/dotbot-sudo/sudo.py" -p "${BASEDIR}/plugins/dotbot-git/git.py" -p "${BASEDIR}/plugins/dotbot-snap/snap.py" -p "${BASEDIR}/plugins/dotbot_plugin_aptget/aptget.py" "${@}"
