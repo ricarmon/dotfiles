@@ -1,4 +1,35 @@
-- aptget:
-    package_name:
-        ppa_source: 
-        upgrade: true
+- sudo:
+  - shell:
+# Docker
+    - ['curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg','Installing Docker GPG']
+    - ['echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu jammy stable" > /etc/apt/sources.list.d/docker.list','Install Docker APT']
+
+# Visual Studio Code
+    - ['wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /tmp/packages.microsoft.gpg','VS Code 1']
+    - ['sudo install -o root -g root -m 644 /tmp/packages.microsoft.gpg /etc/apt/trusted.gpg.d/','VS Code 2']
+    - ['echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list','VS Code 3']
+    - ['rm -f /tmp/packages.microsoft.gpg','VS Code 4']
+
+# Kubernetes
+    - ['sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg','Kubernetes 1']
+    - ['echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list','Kubernetes 2']
+
+# Asbru CM ::  https://www.asbru-cm.net/
+    - ['sudo curl -1sLf "https://dl.cloudsmith.io/public/asbru-cm/release/gpg.7684B0670B1C65E8.key" | gpg --dearmor > /usr/share/keyrings/asbru-cm-release-archive-keyring.gpg','Asbru CM 1']
+    - ['echo "deb [signed-by=/usr/share/keyrings/asbru-cm-release-archive-keyring.gpg] https://dl.cloudsmith.io/public/asbru-cm/release/deb/ubuntu jammy main" > /etc/apt/sources.list.d/asbru-cm.list' ,'Asbru CM 2 (Jammy)']
+
+
+# Notion Enacer :: https://notion-enhancer.github.io/getting-started/installation/
+    - ['echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" > /etc/apt/sources.list.d/notion-repackaged.list','Installing Notion-enhacer APT']
+
+# APT GET 
+  - aptget: [ca-certificates, curl, wget, gnupg, gpg, apt-transport-https, preload, zsh, kitty, mc]
+  - aptget: [docker-ce, docker-ce-cli, containerd.io, docker-compose-plugin]
+  - aptget: notion-app-enhanced
+#  - aptget: steam
+  - aptget: code
+  - aptget: kubectl
+  - aptget: asbru-cm
+
+  - shell:
+    - [chsh -s $(which zsh), Making zsh the default shell]
