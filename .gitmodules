@@ -8,9 +8,6 @@
 [submodule "dotbot-sudo"]
 	path = dotbot-sudo
 	url = https://github.com/DrDynamic/dotbot-sudo.git
-[submodule "plugins/dotbot-git"]
-	path = plugins/dotbot-git
-	url = https://github.com/DrDynamic/dotbot-git.git
 [submodule "plugins/dotbot-snap"]
 	path = plugins/dotbot-snap
 	url = https://github.com/DrDynamic/dotbot-snap.git
