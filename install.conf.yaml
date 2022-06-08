@@ -13,7 +13,6 @@
     ~/.zshrc: zshrc
     ~/.oh-my-zsh:
     ~/.p10k.zsh: p10k.zsh
-    ~/.ssh: 
 
 
 - shell:
