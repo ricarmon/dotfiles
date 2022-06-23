@@ -14,6 +14,16 @@
     - ['sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg','Kubernetes 1']
     - ['echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list','Kubernetes 2']
 
+# KIND
+
+# Helm
+    # - ['curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3']
+#curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+#sudo apt-get install apt-transport-https --yes
+#echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+#sudo apt-get update
+#sudo apt-get install helm
+
 # Asbru CM ::  https://www.asbru-cm.net/
     - ['sudo curl -1sLf "https://dl.cloudsmith.io/public/asbru-cm/release/gpg.7684B0670B1C65E8.key" | gpg --dearmor > /usr/share/keyrings/asbru-cm-release-archive-keyring.gpg','Asbru CM 1']
     - ['echo "deb [signed-by=/usr/share/keyrings/asbru-cm-release-archive-keyring.gpg] https://dl.cloudsmith.io/public/asbru-cm/release/deb/ubuntu jammy main" > /etc/apt/sources.list.d/asbru-cm.list' ,'Asbru CM 2 (Jammy)']
@@ -23,7 +33,7 @@
     - ['echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" > /etc/apt/sources.list.d/notion-repackaged.list','Installing Notion-enhacer APT']
 
 # APT GET 
-  - aptget: [ca-certificates, curl, wget, gnupg, gpg, apt-transport-https, preload, zsh, kitty, mc]
+  - aptget: [ca-certificates, curl, wget, gnupg, gpg, apt-transport-https, preload, zsh, kitty, mc, fuse]
   - aptget: [docker-ce, docker-ce-cli, containerd.io, docker-compose-plugin]
   - aptget: notion-app-enhanced
 #  - aptget: steam
