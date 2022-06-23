@@ -33,13 +33,12 @@
     - ['echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" > /etc/apt/sources.list.d/notion-repackaged.list','Installing Notion-enhacer APT']
 
 # APT GET 
-  - aptget: [ca-certificates, curl, wget, gnupg, gpg, apt-transport-https, preload, zsh, kitty, mc, fuse]
-  - aptget: [docker-ce, docker-ce-cli, containerd.io, docker-compose-plugin]
-  - aptget: notion-app-enhanced
+  - aptget: >- 
+              [ca-certificates, curl, wget, gnupg, gpg, apt-transport-https, preload, zsh, mc, libreoffice, libreoffice-l10n-es, 
+              icedtea-netx, fuse, transmission-gtk, ttf-linux-libertine, unrar, gnome-tweaks, terminator, dconf-editor, pavucontrol, inxi, 
+              flameshot, notion-app-enhanced]
+  - aptget: [docker-ce, docker-ce-cli, containerd.io, docker-compose-plugin, kubectl, aws, aws-cli, code, asbru-cm]
 #  - aptget: steam
-  - aptget: code
-  - aptget: kubectl
-  - aptget: asbru-cm
 
   - shell:
     - [chsh -s $(which zsh), Making zsh the default shell]
