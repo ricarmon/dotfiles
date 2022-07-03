@@ -10,3 +10,5 @@ cache/
 log/
 *.swp
 .DS_Store
+plugins/dotbot-sudo/sudo.conf.json
+
