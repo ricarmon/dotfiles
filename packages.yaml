@@ -34,7 +34,7 @@
 
 # APT GET 
   - aptget: [ca-certificates, curl, wget, gnupg, gpg, apt-transport-https, preload, zsh, mc, libreoffice, libreoffice-l10n-es, 
-              icedtea-netx, transmission-gtk, ttf-linux-libertine, unrar, gnome-tweaks, terminator, dconf-editor, pavucontrol, inxi, 
+              icedtea-netx, transmission-gtk, unrar, gnome-tweaks, terminator, dconf-editor, pavucontrol, inxi, 
               flameshot, notion-app-enhanced]
   - aptget: [docker-ce, docker-ce-cli, containerd.io, docker-compose-plugin, kubectl, aws, aws-cli, code, asbru-cm]
 #  - aptget: steam
